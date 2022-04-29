@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="icon" href="./assets/img/iconWebsite/icon1.webp">
+    <link rel="stylesheet" href="./assets/img/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
+    <title>play song </title>
+</head>
+<body>
+    <div class="play-song ">
+        <div class="dashboard">
+            <div class="dashboard__text">
+                <h3 class="text__name">
+                   nói thật
+                </h3>
+                <h5 class="text__senger">
+                    phương anh
+                </h5>
+            </div>
+            <div class="dashboard__cd">
+                <div class="dashboard__cd--banner-song" style="background-image: url(./assets/img/song-banner/10s-noi-that.jpg); ">
+                </div>
+                <div class="dashboard__cd--control btn-toggle-play">
+                    <i class="dashboard__cd--control-play icon--Btn fas fa-play"></i>
+                    <i class=" dashboard__cd--control-shurt icon--Btn icon-shurt fas fa-pause"></i>
+                </div>
+            </div>
+            <div class="dashboard__control">
+                <ul class="dashboard__control-list">
+                    <li class="control--list--item btn--random ">
+                        <i class="fas fa-random"></i>
+                    </li>
+                    <li class="control--list--item btn--prive">
+                        <i class="fas fa-step-backward"></i>
+                    </li>
+                    <li class="control--list--item btn-toggle-play">
+                        <i class="icon-play icon--Btn fas fa-play"></i>
+                        <i class=" icon-shurt icon--Btn fas fa-pause"></i>
+                    </li>
+                    <li class="control--list--item btn--next">
+                        <i class="fas fa-step-forward"></i>
+                    </li>
+                    <li class="control--list--item btn--repeat">
+                        <i class="fas fa-undo"></i>
+                        
+                    </li>
+                </ul>
+                <label class="control--input">
+                    <input type="range" class="control--input-range"   value='0' step="1" min="0" max="100">
+                    <div class="progress--bar"> </div>
+                </label>
+                
+                <audio src="" id="dashboard__control--audio"  ></audio>
+            </div>
+        </div>
+       <div class="play-song__list">
+           
+       </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
