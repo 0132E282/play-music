@@ -9,7 +9,7 @@ const cd = $('.dashboard__cd');
 const btnPlays = $$('.btn-toggle-play');
 const player = $('.play-song');
 const progress = $('.control--input-range');
-const PLAYER_STORAGE_KEY ='phuc-coder';
+const PLAYER_STORAGE_KEY ='key storage ';
 // btn
 const nextBtn = $('.btn--next');
 const prevBtn = $('.btn--prive');
@@ -86,11 +86,11 @@ const app ={
            cd.style.opacity = newCdWidth/cdWidth;
         }
         // handle event onclick of button play song
-        btnPlays.forEach((playBtn) => {
+        btnPlays.forEach(function(playBtn){
             playBtn.onclick=function(){
                if(_this.isPlayIng){
                 
-                audio.pause();
+                 audio.pause();
                 
                }else{
                  audio.play();
@@ -158,13 +158,14 @@ const app ={
             _this.prevSong();
            }   
             _this.render();
-            _this.scrollToActiveSong();
             audio.play();
+            _this.scrollToActiveSong();
+            
         }
         //handle when event random
-        randomBtn.onclick = function(){
-            _this.setConFig("isRandom ",_this.isRandom)
+        randomBtn.onclick = function(){    
             _this.isRandom = !_this.isRandom;
+            _this.setConFig("isRandom",_this.isRandom);
             randomBtn.classList.toggle('active',_this.isRandom) ;
         }
         //handle when event time song end 
@@ -177,11 +178,9 @@ const app ={
         }
         // handle when repeat one song 
         repeatBtn.onclick = function(){
-            _this.setConFig("isRandom ",_this.isRandom)
             _this.isRepeat = !_this.isRepeat;
-            
+            _this.setConFig("isRepeat",_this.isRepeat)
             repeatBtn.classList.toggle('active',_this.isRepeat) ;
-            
         }
         // handle when click on list song
         listSong.onclick = function(e){
@@ -256,7 +255,7 @@ const app ={
     },
     //bắt đầu khởi đầu
     start : function(){
-        this.loadConfig ();
+        this.loadConfig();
         //xác định thuộc tính
         this.defineProperties();
         //  xử lý sự kiện

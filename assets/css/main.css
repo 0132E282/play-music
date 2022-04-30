@@ -28,7 +28,8 @@ body{
     position: fixed;
     top: 0;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.145);
-    z-index: 1;
+    z-index: 2;
+    overflow: hidden;
 }
 .dashboard__text h3{
     font-size: 25px;
@@ -133,7 +134,7 @@ body{
     display: none;
 }
 
-.control--list--item  .icon-shurt{
+.control--list--item .icon-shurt{
     font-size: 24px;
     font-weight: 900;
     padding: 0;
@@ -147,6 +148,8 @@ body{
 .control--input{
     width: 100%;
     position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 .control--input-range{
     width: 100%;
